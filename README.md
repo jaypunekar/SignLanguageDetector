@@ -21,3 +21,7 @@ conda activate signlang
 ```bash
 pip install -r requirements.txt
 ```
+
+```bash
+git clone https://github.com/ultralytics/yolov5.git
+```
