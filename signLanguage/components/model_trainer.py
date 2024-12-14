@@ -63,7 +63,7 @@ class ModelTrainer:
             cfg_path = "./models/custom_yolov5s.yaml"
 
             # Format the command with correct paths
-            train_command = f"cd {yolov5_path}/ && python train.py --img 640 --batch {self.model_trainer_config.batch_size} --epochs {self.model_trainer_config.no_epochs} --data ../data.yaml --cfg {cfg_path} --weights {self.model_trainer_config.weight_name} --name yolov5s_results --cache"
+            train_command = f"cd {yolov5_path}/ && python train.py --img 300 --batch {self.model_trainer_config.batch_size} --epochs {self.model_trainer_config.no_epochs} --data ../data.yaml --cfg {cfg_path} --weights {self.model_trainer_config.weight_name} --name yolov5s_results --cache"
 
             # Now, execute the command
             os.system(train_command)
@@ -100,7 +100,7 @@ class ModelTrainer:
             os.remove("README.roboflow.txt")
 
             model_trainer_artifact = ModelTrainerArtifact(
-                trained_model_file_path="yolov5/best.pt",
+                trained_model_file_path = f"{self.model_trainer_config.model_trainer_dir}/best.pt",
             )
 
             logging.info("Exited initiate_model_trainer method of ModelTrainer class")
