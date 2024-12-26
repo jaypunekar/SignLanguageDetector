@@ -1,5 +1,6 @@
 # SignLanguageDetector
-End-To-End Sign Language Detector
+End-To-End Sign Language Detector. <br>
+I have taken down the live project from AWS but you can still run the project locally by following the below instructions.
 
 ## Workflow
 
